@@ -15,9 +15,20 @@ fn main() {
     match num_task {
         1 => task_1(),
         2 => task_2(),
+        3 => task_3(),
+        4 => task_4(),
+        5 => task_5(),
         _ => {
             task_1();
-            task_2()
+            println!("{}", "-----------");
+            task_2();
+            println!("{}", "-----------");
+            task_3();
+            println!("{}", "-----------");
+            task_4();
+            println!("{}", "-----------");
+            task_5();
+            println!("{}", "-----------");
         }
     }
 
@@ -27,28 +38,13 @@ fn main() {
 
 fn task_1(){
     println!("Num task: {}", 1);
+    println!("{}", "-----------");
     println!("Silence is golden");
 }
 
-/*
-Display for Weekday {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        match self {
-            Weekday::Mon => write!(f, "Monday"),
-            Weekday::Tue => write!(f, "Tuesday"),
-            Weekday::Wed => write!(f, "Wednesday"),
-            Weekday::Thu => write!(f, "Thursday"),
-            Weekday::Fri => write!(f, "Friday"),
-            Weekday::Sat => write!(f, "Saturday"),
-            Weekday::Sun=> write!(f, "Sunday"),
-        }
-    }
-}
-*/
-
 fn task_2(){
     println!("Num task {}", 2);
-
+    println!("{}", "-----------");
 
     let now = Local::now();
     match now.weekday().number_from_monday() {
@@ -74,4 +70,35 @@ fn task_2(){
         11 => println!("November"),
         _ => println!("December")
     }
+    println!("Alexander")
+}
+
+fn task_3() {
+    println!("Num task {}", 3);
+    println!("{}", "-----------");
+
+    for number in 1..6 {
+        let str = "0".repeat(number);
+        println!("{}. {}", number, str);
+    }
+}
+
+fn task_4() {
+    println!("Num task {}", 4);
+    println!("{}", "-----------");
+
+    for _number in 1..6 {
+        let str = "A".repeat(8);
+        println!("{}", str);
+    }
+}
+
+fn task_5() {
+    println!("Num task {}", 5);
+    println!("{}", "-----------");
+
+    println!("{}", "*     *     *");
+    println!("{}", " *   * *   * ");
+    println!("{}", "  * *   * *  ");
+    println!("{}", "   *     *   ");
 }
