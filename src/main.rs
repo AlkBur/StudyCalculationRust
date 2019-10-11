@@ -1,8 +1,6 @@
-mod task1; mod task2;
-mod task3; mod task4;
-mod task5; mod task6;
-mod task7; mod task8;
-mod task9;
+mod task1; mod task2; mod task3; mod task4;
+mod task5; mod task6; mod task7; mod task8;
+mod task9; mod task10; mod task11;
 
 use std::env;
 
@@ -15,15 +13,12 @@ fn main() {
     }
 
     match num_task {
-        1 => task1::task(),
-        2 => task2::task(),
-        3 => task3::task(),
-        4 => task4::task(),
-        5 => task5::task(),
-        6 => task6::task(),
-        7 => task7::task(),
-        8 => task8::task(),
-        9 => task8::task(),
+        1 => task1::task(), 2 => task2::task(),
+        3 => task3::task(), 4 => task4::task(),
+        5 => task5::task(), 6 => task6::task(),
+        7 => task7::task(), 8 => task8::task(),
+        9 => task8::task(), 10 => task10::task(),
+        11 => task10::task(),
         _ => {
             task1::task();
             println!("{}", "-----------");
@@ -42,6 +37,10 @@ fn main() {
             task8::task();
             println!("{}", "-----------");
             task9::task();
+            println!("{}", "-----------");
+            task10::task();
+            println!("{}", "-----------");
+            task11::task();
             println!("{}", "-----------");
         }
     }
