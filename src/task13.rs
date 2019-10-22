@@ -2,14 +2,12 @@ pub fn task(){
     println!("Num task: {}", 13);
     println!("{}", "-----------");
 
-    print(3.6);
+    print(0.1, 0.2, 1.0);
 }
 
-fn print(x:f64){
-    let e = 1.0_f64.exp();
-    let mut val = e.powf(x-2.0);
-    val += f64::abs(f64::sin(x));
-    val -= f64::powf(x, 4.0)*f64::cos(1.0/x);
+fn print(a:f64, b:f64, x:f64){
+    let mut val = f64::powf(x.powf(2.0)+b, 1.0/5.0);
+    val -= b.powf(2.0)*f64::sin(x+a).powf(3.0)/x;
 
-    println!("e^(x−2)+|sin(x)|−x^4⋅cos(1/x)={}", val);
+    println!("sqrt(x^2+5)^5-b^2*sin(x+a)^3/x={}", val);
 }
