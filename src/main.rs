@@ -1,6 +1,7 @@
 mod task1; mod task2; mod task3; mod task4;
 mod task5; mod task6; mod task7; mod task8;
 mod task9; mod task10; mod task11; mod task12;
+mod task13;
 
 use std::env;
 
@@ -21,6 +22,7 @@ fn main() {
         7 => task7::task(), 8 => task8::task(),
         9 => task8::task(), 10 => task10::task(),
         11 => task10::task(), 12 => task12::task(),
+        13 => task13::task(),
         _ => {
             task1::task();
             println!("{}", "-----------"); task2::task();
@@ -34,6 +36,7 @@ fn main() {
             println!("{}", "-----------"); task10::task();
             println!("{}", "-----------"); task11::task();
             println!("{}", "-----------"); task12::task();
+
         }
     }
 }
