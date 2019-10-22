@@ -1,7 +1,7 @@
 pub fn task(){
     println!("Num task: {}", 13);
     println!("{}", "-----------");
-
+    
     print(0.1, 0.2, 1.0);
 }
 
